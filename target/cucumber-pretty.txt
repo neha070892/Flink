@@ -1,0 +1,9 @@
+
+@TC12345 @Regression
+Scenario: 01 -TC12345- Verification of file upload and download under     [90m# features/Logistics.feature:4[0m
+  [32mGiven [0m[32mUser navigated to URL[0m                                             [90m# com.aeroweb.stepdefination.LogisticsStepDefs.user_navigated_to_login_page()[0m
+  [32mAnd [0m[32madd least expensive "[0m[32m[1mMoisturizers[0m[32m" to cart if weather is "[0m[32m[1mbelow 19[0m[32m"[0m [90m# com.aeroweb.stepdefination.LogisticsStepDefs.navigate_to_page_if_weather_condition(java.lang.String,java.lang.String)[0m
+  [32mAnd [0m[32madd least expensive "[0m[32m[1mSunscreens[0m[32m" to cart if weather is "[0m[32m[1mabove 34[0m[32m"[0m   [90m# com.aeroweb.stepdefination.LogisticsStepDefs.navigate_to_page_if_weather_condition(java.lang.String,java.lang.String)[0m
+  [32mAnd [0m[32mclick on "[0m[32m[1mCart[0m[32m" button[0m                                              [90m# com.aeroweb.stepdefination.LogisticsStepDefs.click_on_something_button(java.lang.String)[0m
+  [32mAnd [0m[32mclick on "[0m[32m[1mPay with Card[0m[32m" button[0m                                     [90m# com.aeroweb.stepdefination.LogisticsStepDefs.click_on_something_button(java.lang.String)[0m
+  [32mAnd [0m[32mverify execution completed successfully[0m                             [90m# com.aeroweb.stepdefination.LogisticsStepDefs.verify_execution_completed_successfully()[0m

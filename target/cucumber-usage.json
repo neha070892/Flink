@@ -1,0 +1,100 @@
+[
+  {
+    "source": "^User navigated to URL$",
+    "steps": [
+      {
+        "name": "User navigated to URL",
+        "aggregatedDurations": {
+          "median": 0.816,
+          "average": 0.816
+        },
+        "durations": [
+          {
+            "duration": 0.816,
+            "location": "classpath:features/Logistics.feature:6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^add least expensive \"(.*?)\" to cart if weather is \"(.*?)\"$",
+    "steps": [
+      {
+        "name": "add least expensive \"Moisturizers\" to cart if weather is \"below 19\"",
+        "aggregatedDurations": {
+          "median": 0.0,
+          "average": 0.0
+        },
+        "durations": [
+          {
+            "duration": 0.0,
+            "location": "classpath:features/Logistics.feature:7"
+          }
+        ]
+      },
+      {
+        "name": "add least expensive \"Sunscreens\" to cart if weather is \"above 34\"",
+        "aggregatedDurations": {
+          "median": 0.944,
+          "average": 0.944
+        },
+        "durations": [
+          {
+            "duration": 0.944,
+            "location": "classpath:features/Logistics.feature:8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^click on \"([^\"]*)\" button$",
+    "steps": [
+      {
+        "name": "click on \"Cart\" button",
+        "aggregatedDurations": {
+          "median": 0.582,
+          "average": 0.582
+        },
+        "durations": [
+          {
+            "duration": 0.582,
+            "location": "classpath:features/Logistics.feature:9"
+          }
+        ]
+      },
+      {
+        "name": "click on \"Pay with Card\" button",
+        "aggregatedDurations": {
+          "median": 0.752,
+          "average": 0.752
+        },
+        "durations": [
+          {
+            "duration": 0.752,
+            "location": "classpath:features/Logistics.feature:10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^verify execution completed successfully$",
+    "steps": [
+      {
+        "name": "verify execution completed successfully",
+        "aggregatedDurations": {
+          "median": 0.297,
+          "average": 0.297
+        },
+        "durations": [
+          {
+            "duration": 0.297,
+            "location": "classpath:features/Logistics.feature:11"
+          }
+        ]
+      }
+    ]
+  }
+]

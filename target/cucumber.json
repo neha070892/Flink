@@ -1,0 +1,157 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-11-17T13:52:34.301Z",
+        "before": [
+          {
+            "result": {
+              "duration": 7017000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.aeroweb.runner.Hooks.setupPrerequisite(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "01 -TC12345- Verification of file upload and download under",
+        "description": "",
+        "id": "flink-feature-file;01--tc12345--verification-of-file-upload-and-download-under",
+        "after": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.aeroweb.runner.Hooks.setupPostrequisite(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5816000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User navigated to URL",
+            "match": {
+              "location": "com.aeroweb.stepdefination.LogisticsStepDefs.user_navigated_to_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "add least expensive \"Moisturizers\" to cart if weather is \"below 19\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Moisturizers",
+                  "offset": 21
+                },
+                {
+                  "val": "below 19",
+                  "offset": 58
+                }
+              ],
+              "location": "com.aeroweb.stepdefination.LogisticsStepDefs.navigate_to_page_if_weather_condition(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3944000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "add least expensive \"Sunscreens\" to cart if weather is \"above 34\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Sunscreens",
+                  "offset": 21
+                },
+                {
+                  "val": "above 34",
+                  "offset": 56
+                }
+              ],
+              "location": "com.aeroweb.stepdefination.LogisticsStepDefs.navigate_to_page_if_weather_condition(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11582000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "click on \"Cart\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Cart",
+                  "offset": 10
+                }
+              ],
+              "location": "com.aeroweb.stepdefination.LogisticsStepDefs.click_on_something_button(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11752000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "click on \"Pay with Card\" button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Pay with Card",
+                  "offset": 10
+                }
+              ],
+              "location": "com.aeroweb.stepdefination.LogisticsStepDefs.click_on_something_button(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 297000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "verify execution completed successfully",
+            "match": {
+              "location": "com.aeroweb.stepdefination.LogisticsStepDefs.verify_execution_completed_successfully()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@TC12345"
+          },
+          {
+            "name": "@Regression"
+          }
+        ]
+      }
+    ],
+    "name": "Flink Feature File",
+    "description": "",
+    "id": "flink-feature-file",
+    "keyword": "Feature",
+    "uri": "classpath:features/Logistics.feature",
+    "tags": []
+  }
+]

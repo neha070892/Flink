@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ImportType>
+	<extractDate>25/02/2020</extractDate>
+
+
+	<pn>
+		<code>AutomationTest</code>
+		<pnType>4-par</pnType>
+		<manufacturerNatoCode>F0201</manufacturerNatoCode>
+		<fromReparationSolution>0</fromReparationSolution>
+		<partDesignation>PN INFOS STANDARDS COMP ET LOGISTIQUES</partDesignation>
+		<pma>0</pma>
+		<quantityUnit>Kg</quantityUnit>
+		<traceability>4</traceability>
+		<averagePrice>7812.00000</averagePrice>
+		<unitOfIssue>2</unitOfIssue>
+		<quantityPerIssue>10.00000</quantityPerIssue>
+		<sparePartClassCode>1</sparePartClassCode>
+		<unpackedHeight>14.97000</unpackedHeight>
+		<unpackedLength>68.30000</unpackedLength>
+		<unpackedWidth>11.09400</unpackedWidth>
+		<netWeight>6.70700</netWeight>
+		<packedWeight>4.96027</packedWeight>
+		<mtbf>7000.00000</mtbf>
+		<mtbur>50000.00000</mtbur>
+		<hasExpirationDate>1</hasExpirationDate>
+		<statusState>1-ong</statusState>
+		<statusDate>07/05/2020 11:38:45</statusDate>
+		<statusUser>admin admin</statusUser>
+		<containerPn>
+			<container-pn>11052020-0001</container-pn>
+		</containerPn>
+	</pn>
+</ImportType>

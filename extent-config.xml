@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- report theme -->
+        <!-- standard, dark -->
+        <theme>standard</theme>
+    
+        <!-- document encoding -->
+        <!-- defaults to UTF-8 -->
+        <encoding>UTF-8</encoding>
+        
+        <!-- protocol for script and stylesheets -->
+        <!-- defaults to https -->
+        <protocol>https</protocol>
+        
+        <!-- title of the document -->
+        <documentTitle>Aero Web Execution Report</documentTitle>
+        
+        <!-- report name - displayed at top-nav -->
+        <reportName>Automation Regression Report</reportName>
+        
+        <!-- location of charts in the test view -->
+        <!-- top, bottom -->
+        <testViewChartLocation>TOP</testViewChartLocation>
+        
+        
+        
+        <chartID>ChartContainer</chartID>
+ 
+        <!-- custom javascript -->
+        <scripts>
+            <![CDATA[
+               $(document).ready(function() {
+                
+                $.getScript("https://canvasjs.com/assets/script/canvasjs.min.js", function() {
+                       
+                    var c=document.createElement("div");
+                    c.setAttribute("id","chartJS");
+                    c.setAttribute("style","resize: horizontal; height: 400px; width: 1500px; margin-left: 20px;");
+                    document.getElementById("dashboard-view").appendChild(c);
+                    
+                    var str = document.getElementsByClassName('time-taken')[0].textContent;
+                    console.log(str);
+                    var hours = parseInt(str.substring(0, str.indexOf("h")));
+                    console.log("HOURS:: "+hours);
+                      var mins = parseInt(str.substring(str.indexOf("h")+2, str.indexOf("m")));
+                    console.log("Mins:: "+mins);
+                      var secs = parseInt(str.substring(str.indexOf("m")+2, str.indexOf("s")));
+                    console.log("Secs:: "+secs);
+                      var microSecs = parseInt(str.substring(str.indexOf("s")+2, str.length-2));
+                    console.log("microSecs:: "+microSecs);
+                    var value=((((((hours*60)+mins)*60)+secs)*1000)+microSecs)/1000;
+                    console.log(value);
+                    var dataArr=[{y    :    parseFloat(value),    label    : document.getElementsByClassName('test-name')[0].textContent}];
+
+ 
+
+                    for(i=1;i<document.getElementsByClassName('time-taken').length-1;i++)
+                    {
+                        var str = document.getElementsByClassName('time-taken')[i].textContent;
+                        var hours = parseInt(str.substring(0, str.indexOf("h")));
+                          var mins = parseInt(str.substring(str.indexOf("h")+2, str.indexOf("m")));
+                          var secs = parseInt(str.substring(str.indexOf("m")+2, str.indexOf("s")));
+                          var microSecs = parseInt(str.substring(str.indexOf("s")+2, str.length-2));
+                        var value=((((((hours*60)+mins)*60)+secs)*1000)+microSecs)/1000;
+
+ 
+
+                        dataArr.push({y    :    parseFloat(value)    ,    label    : document.getElementsByClassName('test-name')[i].textContent});
+                    }
+                    console.log(dataArr);
+                 
+                    var chart = new CanvasJS.Chart(document.getElementById('chartJS'), {
+                    animationEnabled: true,
+                    theme: "light2", // "light1", "light2", "dark1", "dark2"
+                    height:350,
+                    width:1500,
+                    title:{
+                        text: "Time of Execution"
+                    },
+                    axisY: {
+                        title: "Time(s)"
+                    },
+                    data: [{        
+                        type: "column",  
+                        showInLegend: true, 
+                        legendMarkerColor: "grey",
+                        legendText: "TestCases",
+                        dataPoints: dataArr
+                    }]
+                });
+                chart.render();
+                
+                $.getScript("https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit")
+                      .done(function() {
+                        console.log( "Loaded" );
+                         var gt=document.createElement("div");
+                         gt.setAttribute("id","google_translate_element_cont");
+                         gt.setAttribute("style","margin-right: 1%;");
+                         gt.setAttribute("class","right hide-on-med-and-down nav-right");
+                        var vt=document.createElement("div");
+                        gt.setAttribute("id","google_translate_element");
+                        document.getElementsByClassName("controls ")[0].appendChild(gt);
+                        document.getElementById("google_translate_element_cont")[0].appendChild(vt);
+                    })
+                    .fail(function( jqxhr, settings, exception ) {
+                        $( "div.log" ).text( "Triggered ajaxError handler." );
+                    });
+
+ 
+
+                });
+                
+    
+                
+                           
+        });
+            ]]>
+            <script type="text/javascript">
+            function googleTranslateElementInit() {
+             new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+            </script>
+        </scripts>
+        
+        <!-- custom styles -->
+        <styles>
+        </styles>
+    </configuration>
+</extentreports>
